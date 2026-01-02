@@ -1,0 +1,36 @@
+.footer {
+    padding: 40px 0;
+    background-color: #0B1120;
+    border-top: 1px solid var(--border-color);
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .socials {
+            display: flex;
+            gap: 1.5rem;
+
+            span {
+                color: var(--text-secondary);
+                cursor: pointer;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: var(--accent-color);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import '../../../styles.scss';
+
+.contact-section {
+    padding: 100px 0;
+    background-color: var(--bg-secondary);
+
+    .grid-display {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 4rem;
+        align-items: center;
+
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.contact-form-wrapper {
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+
+        .highlight {
+            color: var(--accent-color);
+        }
+    }
+
+    p {
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            label {
+                font-size: 0.9rem;
+                font-weight: 500;
+            }
+
+            input,
+            textarea {
+                background: rgba(0, 0, 0, 0.2);
+                border: 1px solid var(--border-color);
+                padding: 12px;
+                border-radius: 8px;
+                color: var(--text-primary);
+                font-family: inherit;
+
+                &:focus {
+                    outline: none;
+                    border-color: var(--accent-color);
+                    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+                }
+            }
+        }
+    }
+}
+
+.contact-visual {
+    display: flex;
+    justify-content: center;
+
+    .contact-char {
+        max-width: 100%;
+        height: auto;
+        filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.2));
+        animation: pulse 4s infinite ease-in-out;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

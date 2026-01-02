@@ -1,0 +1,22 @@
+<nav class="navbar" [class.scrolled]="isScrolled()">
+    <div class="container nav-container">
+        <div class="logo">Dev<span>Portfolio</span></div>
+
+        <div class="nav-links" [class.active]="isMenuOpen()">
+            <a (click)="scrollTo('hero')">Home</a>
+            <a (click)="scrollTo('about')">About</a>
+            <a (click)="scrollTo('skills')">Skills</a>
+            <a (click)="scrollTo('experience')">Experience</a>
+            <a (click)="scrollTo('projects')">Projects</a>
+            <a (click)="scrollTo('contact')">Contact</a>
+        </div>
+
+        <div class="menu-toggle" (click)="toggleMenu()">
+            <div class="hamburger" [class.open]="isMenuOpen()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</nav>
